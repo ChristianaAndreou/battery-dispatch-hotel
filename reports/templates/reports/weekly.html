@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weekly Battery Report</title>
+</head>
+<body>
+    <h1>Weekly Battery Dispatch Report</h1>
+
+    <h2>Summary</h2>
+    <ul>
+        <li>Grid spend without battery: €{{ no_battery_cost|floatformat:2 }}</li>
+        <li>Grid spend with battery: €{{ with_battery_cost|floatformat:2 }}</li>
+        <li>Weekly saving: €{{ saving|floatformat:2 }}</li>
+        <li>Total charged: {{ total_charged|floatformat:1 }} kWh</li>
+        <li>Total discharged: {{ total_discharged|floatformat:1 }} kWh</li>
+        <li>Solar self-consumption: {{ solar_self_consumption|floatformat:1 }}%</li>
+    </ul>
+
+    <h2>Battery SoC Curve</h2>
+    <img src="data:image/png;base64,{{ chart }}" alt="Battery SoC chart">
+</body>
+</html>
