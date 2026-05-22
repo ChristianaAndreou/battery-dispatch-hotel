@@ -27,6 +27,16 @@ Grid tariff:
 Day 09:00-23:00: EUR 0.30/kWh
 Night 23:00-09:00: EUR 0.15/kWh
 
+## Assumptions
+
+- The hotel load profile is synthetic because I could not find a clean public 15-minute Cyprus hotel dataset.
+- The load profile is shaped to represent a hotel with higher afternoon cooling demand and some daily/weekly variation.
+- The weekly peak load is scaled to approximately 200 kW.
+- The solar profile is synthetic and represents a 200 kWp rooftop PV system in Limassol.
+- The tariff uses the provided stylised two-rate TOU structure, not a real EAC commercial tariff.
+- Grid export is not allowed, so surplus solar is either stored in the battery or curtailed.
+- The dispatch policy is greedy rather than optimised with a linear programming solver.
+
 ## Battery assumptions
 
 - Battery capacity: 400 kWh
