@@ -49,4 +49,4 @@ Solar covers load first. Surplus solar charges the battery. During expensive day
 
 ## AI usage
 
-I used AI to help structure the Django project, generate boilerplate code, design the dispatch logic, and draft the README.
+I used AI as a coding assistant to help structure the Django project, generate boilerplate code, design the dispatch logic, and draft the README, while I was responsible for implementing, testing, adapting, and integrating the final application.
