@@ -17,13 +17,15 @@ http://127.0.0.1:8000/reports/weekly/
 ## Data sources
 
 Solar production is generated as a synthetic 200 kWp PV profile for Limassol, Cyprus.
+
 In a production version, I would pull hourly PV data from renewables.ninja and resample it to 15-minute intervals.
 
-Hotel load is synthetic because there is no clean public 15-minute Cyprus hotel dataset.
+Hotel load is synthetic because there is no clean public 15-minute Cyprus hotel dataset. I modelled a reasonable hotel demand shape with higher afternoon cooling demand and scaled it so the weekly peak is around 200 kW.
 
 Grid tariff:
-- Day 09:00-23:00: EUR 0.30/kWh
-- Night 23:00-09:00: EUR 0.15/kWh
+
+Day 09:00-23:00: EUR 0.30/kWh
+Night 23:00-09:00: EUR 0.15/kWh
 
 ## Battery assumptions
 
@@ -49,4 +51,4 @@ Solar covers load first. Surplus solar charges the battery. During expensive day
 
 ## AI usage
 
-I used AI as a coding assistant to help structure the Django project, generate boilerplate code, design the dispatch logic, and draft the README, while I was responsible for implementing, testing, adapting, and integrating the final application.
+I used AI as a coding assistant to help structure the Django project, generate boilerplate code, design the dispatch logic, and draft the README. I was responsible for implementing, testing, adapting, and integrating the final application.
