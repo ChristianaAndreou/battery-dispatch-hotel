@@ -51,14 +51,27 @@ Night 23:00-09:00: EUR 0.15/kWh
 
 Solar covers load first. Surplus solar charges the battery. During expensive day-rate hours, the battery discharges to reduce grid imports. Any surplus solar that cannot be stored is curtailed.
 
+## Weekly report metrics
+
+The weekly report shows:
+
+- Grid spend without the battery
+- Grid spend with the battery
+- Weekly saving
+- Total kWh charged into the battery
+- Total kWh discharged from the battery
+- Solar self-consumption percentage
+- Battery SoC curve over the week
+
 ## What I would build next
 
-- Pull real renewables.ninja solar data
-- Pull a real EAC commercial tariff
-- Add a what-if form for PV and battery size
-- Improve dispatch using optimisation
-- Add more charts
+- Add tests for the dispatch logic and report calculations
+- Pull a real EAC commercial tariff and compare results against the stylised tariff
+- Add a what-if form to vary PV size and battery size
+- Add CSV upload/export
+- Improve the dispatch policy using optimisation
+- Add clearer charts for grid import, solar generation, load, and curtailment
 
 ## AI usage
 
-I used AI as a coding assistant to help structure the Django project, generate boilerplate code, design the dispatch logic, and draft the README. I was responsible for implementing, testing, adapting, and integrating the final application.
+I used AI as a coding assistant to help structure the Django project, generate boilerplate code, design the dispatch logic, and draft the README. I was responsible for implementing, checking, adapting, and integrating the final application.
